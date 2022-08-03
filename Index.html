@@ -17,27 +17,27 @@
         <form class="form" >
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" class="form-control required" id="name" placeholder="Enter your Name" onblur="namecheck()" >
+              <input type="text" class="form-control required" id="name" placeholder="Enter your Name" onblur="namecheck()" onchange="button()">
             </div>
             <div id="namealert"></div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="text" class="form-control required" id="email" placeholder="Enter your Email" onblur="mailcheck()" >
+              <input type="text" class="form-control required" id="email" placeholder="Enter your Email" onblur="mailcheck()" onchange="button()">
             </div>
             <p id="emailalert"></p>
             <div class="form-group">
                 <label for="num">Phone Number</label>
-                <input type="text" class="form-control required" id="num" placeholder="Enter your phone number" onblur="numcheck()" >
+                <input type="text" class="form-control required" id="num" placeholder="Enter your phone number" onblur="numcheck()" onchange="button()">
               </div>
               <p id="phonealert"></p>
               <div class="form-group">
                 <label for="img">Upload Image</label>
-                <input type="file" class="form-control-file required" id="file" accept="image/png, image/jpeg" onchange="sizecheck()">
+                <input type="file" class="form-control-file required" id="file" accept="image/png, image/jpeg" onchange="sizecheck()" onchange="button()">
               </div>
               <p id="fileInfo">
               </p>
               <img id="blah" src="#" style="display:none ;" /><br>
-              <button type="submit" class="btn btn-info submit-button" disabled>Submit</button>
+              <button type="submit" class="btn btn-info" id="submit-button"disabled>Submit</button>
           </form>
 
     </div>
