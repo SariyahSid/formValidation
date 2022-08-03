@@ -14,7 +14,7 @@
   <body>
     <div class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh;">
     <div class="container d-flex justify-content-center align-items-center" >
-        <form>
+        <form class="form" >
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" class="form-control required" id="name" placeholder="Enter your Name" onblur="namecheck()" >
@@ -32,12 +32,12 @@
               <p id="phonealert"></p>
               <div class="form-group">
                 <label for="img">Upload Image</label>
-                <input type="file" class="form-control-file required" id="img" accept="image/png, image/jpeg" >
+                <input type="file" class="form-control-file required" id="file" accept="image/png, image/jpeg" onchange="sizecheck()">
               </div>
-              <p id="imgalert">
+              <p id="fileInfo">
               </p>
               <img id="blah" src="#" style="display:none ;" /><br>
-              <button type="submit" onclick="validate()" class="btn btn-info " disabled>Submit</button>
+              <button type="submit" class="btn btn-info submit-button" disabled>Submit</button>
           </form>
 
     </div>
