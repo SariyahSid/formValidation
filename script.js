@@ -87,6 +87,7 @@ if(file.size < 2097152 && w > 200 && h > 200){i=true;
                   }
                           else{
                             document.getElementById("submit-button").disabled=true;
+                            document.getElementById("blah").style.display = "none";
                             let el = document.getElementById("fileInfo");
     
         el.innerHTML = `
@@ -114,7 +115,8 @@ if(file.size < 2097152 && w > 200 && h > 200){i=true;
     let name=/^[a-zA-Z\s]+$/.test(document.getElementById("name").value);
     let mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value);
     let phone=/^\(?([6-9]{1})\)?([0-9]{9})$/.test(document.getElementById("num").value); 
-    if(name && mail && phone){
+    let fi = document.getElementById('file');
+    if(name && mail && phone && (fi.files.length > 0)){
     console.log("yes");
     document.getElementById("submit-button").disabled=false;}
     else{
